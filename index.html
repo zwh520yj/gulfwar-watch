@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>US-Iran Crisis 2026 — A Complete Explainer | GulfWar Watch</title>
+<meta name="description" content="Comprehensive timeline and analysis of the 2026 US-Iran conflict: from the February outbreak to the June 3 Kuwait Airport attack. Maps, photos, and expert context.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   CSS CUSTOM PROPERTIES
+   ============================================================ */
+:root {
+  --bg-deep: #08090d;
+  --bg-surface: #0f1118;
+  --bg-card: #161922;
+  --bg-card-hover: #1c1f2b;
+  --border-subtle: #222633;
+  --border-active: #3a3f55;
+  --text-primary: #e8e6e3;
+  --text-secondary: #9a98a8;
+  --text-muted: #5e5c72;
+  --accent-red: #e74c3c;
+  --accent-orange: #f39c12;
+  --accent-blue: #3498db;
+  --accent-gold: #c9a96e;
+  --accent-green: #27ae60;
+  --radius-sm: 6px;
+  --radius: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --shadow-card: 0 4px 24px rgba(0,0,0,0.3);
+}
+
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg-deep);
+  color: var(--text-primary);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ============================================================
+   HERO HEADER
+   ============================================================ */
+.hero {
+  position: relative;
+  min-height: 65vh;
+  display: flex;
+  align-items: flex-end;
+  padding: 80px 0 60px;
+  overflow: hidden;
+  background: linear-gradient(180deg, #0a0d16 0%, #10131f 40%, #1a1520 70%, #0f1118 100%);
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(ellipse at 70% 20%, rgba(231,76,60,0.12) 0%, transparent 60%),
+              radial-gradient(ellipse at 30% 60%, rgba(243,156,18,0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+.hero-grid {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+  text-align: center;
+}
+.hero-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  background: rgba(231,76,60,0.15);
+  border: 1px solid rgba(231,76,60,0.3);
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-red);
+  margin-bottom: 20px;
+}
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(36px, 6vw, 64px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+.hero h1 .hl { color: var(--accent-red); }
+.hero-sub {
+  font-size: 18px;
+  color: var(--text-secondary);
+  max-width: 640px;
+  margin: 0 auto 28px;
+  line-height: 1.6;
+}
+.hero-meta {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+.hero-meta span { display: flex; align-items: center; gap: 6px; }
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+.nav-strip {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(15,17,24,0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-subtle);
+  overflow-x: auto;
+}
+.nav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  gap: 4px;
+  padding: 0 20px;
+}
+.nav-inner a {
+  display: block;
+  padding: 14px 18px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-decoration: none;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+}
+.nav-inner a:hover { color: var(--text-primary); border-bottom-color: var(--border-active); }
+.nav-inner a.active { color: var(--accent-red); border-bottom-color: var(--accent-red); }
+
+/* ============================================================
+   CONTAINER & LAYOUT
+   ============================================================ */
+.container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+.section { padding: 64px 0; }
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 8px;
+}
+.section-subtitle {
+  font-size: 15px;
+  color: var(--text-muted);
+  margin-bottom: 36px;
+  border-left: 3px solid var(--accent-red);
+  padding-left: 14px;
+}
+
+/* ============================================================
+   CARDS
+   ============================================================ */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all 0.25s var(--ease-out);
+  box-shadow: var(--shadow-card);
+}
+.card:hover { background: var(--bg-card-hover); border-color: var(--border-active); }
+.card-body { padding: 28px; }
+.card-body h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+.card-body p { color: var(--text-secondary); font-size: 15px; line-height: 1.7; }
+
+/* ============================================================
+   PHOTO BLOCK
+   ============================================================ */
+.photo-block {
+  margin: 32px 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+}
+.photo-block img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  max-height: 500px;
+}
+.photo-caption {
+  padding: 12px 18px;
+  font-size: 13px;
+  color: var(--text-muted);
+  background: rgba(0,0,0,0.3);
+  border-top: 1px solid var(--border-subtle);
+}
+.photo-caption strong { color: var(--text-secondary); }
+
+/* ============================================================
+   TIMELINE
+   ============================================================ */
+.timeline { position: relative; padding-left: 32px; }
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 8px; top: 0; bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--accent-red), var(--accent-orange), var(--accent-blue));
+}
+.tl-item {
+  position: relative;
+  margin-bottom: 32px;
+  padding-left: 24px;
+}
+.tl-item::before {
+  content: '';
+  position: absolute;
+  left: -28px; top: 8px;
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  border: 3px solid var(--bg-deep);
+  background: var(--accent-red);
+}
+.tl-item.major::before { background: var(--accent-orange); width: 18px; height: 18px; left: -30px; }
+.tl-item.diplo::before { background: var(--accent-blue); }
+.tl-date {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--accent-red);
+  margin-bottom: 4px;
+}
+.tl-item.major .tl-date { color: var(--accent-orange); }
+.tl-item.diplo .tl-date { color: var(--accent-blue); }
+.tl-item h4 { font-size: 17px; font-weight: 700; margin-bottom: 4px; }
+.tl-item p { font-size: 14px; color: var(--text-secondary); line-height: 1.65; }
+
+/* ============================================================
+   FACT BOX
+   ============================================================ */
+.fact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin: 32px 0;
+}
+.fact-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+  padding: 20px;
+  text-align: center;
+}
+.fact-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--accent-red);
+}
+.fact-label { font-size: 13px; color: var(--text-muted); margin-top: 4px; }
+
+/* ============================================================
+   MAP
+   ============================================================ */
+.map-container {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin: 32px 0;
+}
+.map-container svg { width: 100%; height: auto; display: block; }
+
+/* ============================================================
+   CALLOUT
+   ============================================================ */
+.callout {
+  padding: 20px 24px;
+  border-radius: var(--radius);
+  margin: 28px 0;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.callout-danger {
+  background: rgba(231,76,60,0.08);
+  border-left: 4px solid var(--accent-red);
+}
+.callout-warn {
+  background: rgba(243,156,18,0.08);
+  border-left: 4px solid var(--accent-orange);
+}
+.callout-info {
+  background: rgba(52,152,219,0.08);
+  border-left: 4px solid var(--accent-blue);
+}
+.callout strong { display: block; margin-bottom: 4px; font-size: 15px; }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer {
+  text-align: center;
+  padding: 40px 24px;
+  color: var(--text-muted);
+  font-size: 13px;
+  border-top: 1px solid var(--border-subtle);
+}
+.footer a { color: var(--accent-blue); text-decoration: none; }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 640px) {
+  .hero { min-height: 50vh; padding: 40px 0; }
+  .hero h1 { font-size: 28px; }
+  .hero-sub { font-size: 15px; }
+  .section { padding: 40px 0; }
+  .section-title { font-size: 24px; }
+  .fact-grid { grid-template-columns: repeat(2, 1fr); }
+  .nav-inner a { padding: 12px 12px; font-size: 12px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<header class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-badge">&#128308; Live Crisis Tracker</div>
+    <h1>The <span class="hl">US–Iran</span> Gulf War:<br>How We Got Here</h1>
+    <p class="hero-sub">A complete, easy-to-understand timeline of the 2026 conflict — from the February airstrikes through the June 3 attack on Kuwait International Airport.</p>
+    <div class="hero-meta">
+      <span>&#128197; Last updated: June 3, 2026</span>
+      <span>&#128083; 15 min read</span>
+    </div>
+  </div>
+</header>
+
+<!-- ============================================================
+     STICKY NAV
+     ============================================================ -->
+<nav class="nav-strip" id="nav">
+  <div class="nav-inner">
+    <a href="#overview">Overview</a>
+    <a href="#map">War Map</a>
+    <a href="#timeline">Timeline</a>
+    <a href="#kuwait">Kuwait Attack</a>
+    <a href="#hormuz">Strait Crisis</a>
+    <a href="#impact">Global Impact</a>
+    <a href="#sources">Sources</a>
+  </div>
+</nav>
+
+<!-- ============================================================
+     OVERVIEW
+     ============================================================ -->
+<section class="section" id="overview">
+  <div class="container">
+    <h2 class="section-title">&#128269; The Big Picture</h2>
+    <p class="section-subtitle">What happened, why it matters, and what comes next.</p>
+
+    <p style="font-size:16px; line-height:1.8; color:var(--text-secondary); margin-bottom:24px;">
+      On <strong>February 28, 2026</strong>, the United States and Israel launched joint military strikes against Iran, killing senior Iranian leadership. This triggered a full-scale war that lasted over a month, a fragile <strong>ceasefire on April 8</strong>, and an ongoing cycle of escalation that — as of June 3 — has brought the two nations to the brink once again. The conflict centers on three flashpoints: <span style="color:var(--accent-red);">Iran's nuclear program</span>, <span style="color:var(--accent-orange);">control of the Strait of Hormuz</span>, and <span style="color:var(--accent-blue);">US military presence in Gulf states</span>.
+    </p>
+
+    <div class="fact-grid">
+      <div class="fact-box">
+        <div class="fact-num">96</div>
+        <div class="fact-label">Days since war began<br>(Feb 28 – Jun 3)</div>
+      </div>
+      <div class="fact-box">
+        <div class="fact-num">122</div>
+        <div class="fact-label">Commercial ships diverted<br>by US blockade</div>
+      </div>
+      <div class="fact-box">
+        <div class="fact-num">~$96</div>
+        <div class="fact-label">Brent crude per barrel<br>June 3 peak</div>
+      </div>
+      <div class="fact-box">
+        <div class="fact-num">1.2M+</div>
+        <div class="fact-label">Displaced in Lebanon<br>from parallel conflict</div>
+      </div>
+    </div>
+
+    <!-- Photo: CENTCOM carrier operations -->
+    <div class="photo-block">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/USS_Abraham_Lincoln_%28CVN-72%29_underway_in_the_Atlantic_Ocean_on_30_January_2019_%2844741506614%29.jpg/1280px-USS_Abraham_Lincoln_%28CVN-72%29_underway_in_the_Atlantic_Ocean_on_30_January_2019_%2844741506614%29.jpg"
+           alt="USS Abraham Lincoln (CVN-72) aircraft carrier at sea"
+           loading="lazy">
+      <div class="photo-caption">
+        <strong>&#128247; USS Abraham Lincoln (CVN-72)</strong> — The Nimitz-class carrier currently deployed in the Arabian Sea, enforcing the US naval blockade on Iran. CENTCOM reports the carrier strike group includes 8 F-35C stealth fighters, F/A-18 Super Hornets, EA-18G Growlers, and over 100 aircraft. (File photo: U.S. Navy)
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     WAR MAP
+     ============================================================ -->
+<section class="section" id="map" style="background: var(--bg-surface);">
+  <div class="container">
+    <h2 class="section-title">&#128506; Conflict Zone Map</h2>
+    <p class="section-subtitle">Key locations in the US-Iran theater of operations.</p>
+
+    <div class="map-container">
+      <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+        <!-- Background water -->
+        <rect width="800" height="500" fill="#0f1118"/>
+        <rect x="120" y="100" width="560" height="320" rx="10" fill="#111522" stroke="#222633" stroke-width="1"/>
+
+        <!-- Arabian/Persian Gulf simplified -->
+        <ellipse cx="400" cy="280" rx="220" ry="130" fill="#181d30" stroke="#2a3048" stroke-width="1"/>
+
+        <!-- Iran -->
+        <ellipse cx="500" cy="180" rx="130" ry="80" fill="#1a2035" stroke="#3a3f55" stroke-width="1"/>
+        <text x="500" y="180" fill="#e74c3c" font-size="13" font-weight="700" text-anchor="middle" font-family="Inter,sans-serif">IRAN</text>
+
+        <!-- Qeshm Island marker -->
+        <circle cx="540" cy="235" r="18" fill="none" stroke="#e74c3c" stroke-width="2" stroke-dasharray="4 2">
+          <animate attributeName="r" values="18;28;18" dur="2s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="540" cy="235" r="5" fill="#e74c3c"/>
+        <text x="560" y="232" fill="#e74c3c" font-size="11" font-weight="600" font-family="Inter,sans-serif">Qeshm Island</text>
+        <text x="560" y="244" fill="#6a6880" font-size="9" font-family="Inter,sans-serif">US struck Jun 2</text>
+
+        <!-- Kuwait -->
+        <circle cx="300" cy="195" r="16" fill="#f39c12" opacity="0.15"/>
+        <circle cx="300" cy="195" r="6" fill="#f39c12"/>
+        <text x="280" y="182" fill="#f39c12" font-size="13" font-weight="700" text-anchor="end" font-family="Inter,sans-serif">KUWAIT</text>
+        <text x="280" y="195" fill="#f39c12" font-size="9" text-anchor="end" font-family="Inter,sans-serif">Airport hit Jun 3 &#x1F4A5;</text>
+
+        <!-- Bahrain -->
+        <circle cx="365" cy="265" r="14" fill="#f39c12" opacity="0.15"/>
+        <circle cx="365" cy="265" r="5" fill="#f39c12"/>
+        <text x="350" y="295" fill="#f39c12" font-size="11" font-weight="600" text-anchor="end" font-family="Inter,sans-serif">BAHRAIN</text>
+        <text x="350" y="307" fill="#6a6880" font-size="9" text-anchor="end" font-family="Inter,sans-serif">5th Fleet HQ</text>
+
+        <!-- Saudi Arabia -->
+        <ellipse cx="250" cy="310" rx="90" ry="60" fill="#1a2035" stroke="#3a3f55" stroke-width="1"/>
+        <text x="250" y="310" fill="#6a6880" font-size="11" font-weight="500" text-anchor="middle" font-family="Inter,sans-serif">SAUDI ARABIA</text>
+
+        <!-- UAE -->
+        <circle cx="390" cy="320" r="20" fill="#1a2035" stroke="#3a3f55" stroke-width="1"/>
+        <text x="390" y="323" fill="#6a6880" font-size="9" text-anchor="middle" font-family="Inter,sans-serif">UAE</text>
+
+        <!-- Strait of Hormuz marker -->
+        <line x1="500" y1="290" x2="460" y2="320" stroke="#3498db" stroke-width="2"/>
+        <circle cx="455" cy="322" r="4" fill="#3498db"/>
+        <text x="510" y="310" fill="#3498db" font-size="10" font-weight="600" font-family="Inter,sans-serif">Strait of</text>
+        <text x="510" y="322" fill="#3498db" font-size="10" font-weight="600" font-family="Inter,sans-serif">Hormuz &#128681;</text>
+
+        <!-- USS Lincoln -->
+        <text x="610" y="345" font-size="20" text-anchor="middle">&#128755;</text>
+        <text x="610" y="362" fill="#3498db" font-size="10" font-weight="600" text-anchor="middle" font-family="Inter,sans-serif">USS Lincoln</text>
+        <text x="610" y="374" fill="#6a6880" font-size="8" text-anchor="middle" font-family="Inter,sans-serif">Arabian Sea</text>
+
+        <!-- Iraq -->
+        <ellipse cx="280" cy="150" rx="60" ry="40" fill="#1a2035" stroke="#3a3f55" stroke-width="1"/>
+        <text x="280" y="153" fill="#6a6880" font-size="10" text-anchor="middle" font-family="Inter,sans-serif">IRAQ</text>
+
+        <!-- Legend -->
+        <rect x="30" y="420" width="170" height="65" rx="6" fill="#15171f" stroke="#222633" stroke-width="1"/>
+        <text x="42" y="440" fill="#e8e6e3" font-size="11" font-weight="600" font-family="Inter,sans-serif">Legend</text>
+        <circle cx="44" cy="454" r="4" fill="#e74c3c"/><text x="54" y="458" fill="#6a6880" font-size="10" font-family="Inter,sans-serif">US Strike Target</text>
+        <circle cx="44" cy="470" r="4" fill="#f39c12"/><text x="54" y="474" fill="#6a6880" font-size="10" font-family="Inter,sans-serif">Iranian Attack / Damage</text>
+      </svg>
+      <div class="photo-caption">
+        <strong>&#128506; Key conflict zones</strong> — The US-Iran theater extends from the Arabian Sea to Kuwait. Red markers indicate US strike targets; orange marks show Iranian retaliation. The Strait of Hormuz (blue) remains the strategic chokepoint at the center of the crisis.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FULL TIMELINE
+     ============================================================ -->
+<section class="section" id="timeline">
+  <div class="container">
+    <h2 class="section-title">&#128337; Complete Timeline</h2>
+    <p class="section-subtitle">From the outbreak of war to today — every major event, in order.</p>
+
+    <div class="callout callout-info">
+      <strong>&#128161; How to read this timeline</strong>
+      <strong style="color:var(--accent-red)">Red dates</strong> = military action &nbsp;|&nbsp; <strong style="color:var(--accent-orange)">Orange dots</strong> = major escalation &nbsp;|&nbsp; <strong style="color:var(--accent-blue)">Blue dates</strong> = diplomacy
+    </div>
+
+    <div class="timeline">
+
+      <!-- Phase 1: War Outbreak -->
+      <h3 style="margin:28px 0 16px -32px; font-size:18px; color:var(--accent-red); letter-spacing:0.02em;">&#9632; PHASE 1 — War Erupts (Late February – March)</h3>
+
+      <div class="tl-item major">
+        <div class="tl-date">Feb 28, 2026</div>
+        <h4>US & Israel Launch Joint Strikes on Iran</h4>
+        <p>The United States and Israel conduct coordinated airstrikes on Iranian military and nuclear facilities. Senior Iranian leadership is killed. Iran retaliates immediately, firing missiles at US bases in the Gulf and effectively closing the Strait of Hormuz. <strong>This is the start of the war.</strong></p>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-date">Mar 1–7, 2026</div>
+        <h4>Iran Retaliates Across the Gulf</h4>
+        <p>IRGC launches waves of ballistic missiles and drones at US bases in Kuwait, Bahrain, Saudi Arabia, and the UAE. Kuwait International Airport is struck for the first time. Oil prices surge past $100/barrel.</p>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-date">Mar 9, 2026</div>
+        <h4>USS Abraham Lincoln Deployed to Arabian Sea</h4>
+        <p>EU Copernicus Sentinel-2 satellite captures the USS Abraham Lincoln carrier strike group sailing toward the Strait of Hormuz. IRGC Navy commander warns: "If Lincoln enters our range, we will open fire."</p>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-date">Mar 29, 2026</div>
+        <h4>Iran Threatens Carrier Strike</h4>
+        <p>Iranian Navy commander explicitly warns that the USS Abraham Lincoln will be targeted if it enters Iranian missile range. The carrier remains ~200km off the Iranian coast.</p>
+      </div>
+
+      <!-- Phase 2: Ceasefire -->
+      <h3 style="margin:28px 0 16px -32px; font-size:18px; color:var(--accent-blue); letter-spacing:0.02em;">&#9632; PHASE 2 — Fragile Ceasefire (April)</h3>
+
+      <div class="tl-item major diplo">
+        <div class="tl-date">Apr 7, 2026</div>
+        <h4>Trump Announces Unilateral Ceasefire</h4>
+        <p>President Trump declares a unilateral ceasefire, calling for negotiations. The announcement comes after over a month of heavy exchanges that have devastated Gulf infrastructure and sent global oil markets into turmoil.</p>
+      </div>
+
+      <div class="tl-item diplo">
+        <div class="tl-date">Apr 8, 2026</div>
+        <h4>US-Iran Ceasefire Reached via Pakistan Mediation</h4>
+        <p>A formal ceasefire is agreed upon, mediated by Pakistan. Both sides agree to talks in Islamabad. The Strait of Hormuz partially reopens, though traffic remains sparse (~7 ships/day vs. normal 125–140).</p>
+      </div>
+
+      <div class="tl-item major">
+        <div class="tl-date">Apr 13, 2026</div>
+        <h4>Trump Imposes Naval Blockade on Iran</h4>
+        <p>Despite the ceasefire, Trump announces a full naval blockade preventing any ship from accessing Iranian ports. CENTCOM begins enforcement. The goal: prevent Iran from collecting toll revenue from Strait of Hormuz transits.</p>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-date">Late Apr, 2026</div>
+        <h4>41 Tankers, 69 Million Barrels Stranded</h4>
+        <p>The US blockade prevents 41 oil tankers carrying ~69 million barrels from reaching Iranian ports. Iran responds by formalizing the <strong>Persian Gulf Strait Authority (PGSA)</strong>, requiring all transiting vessels to be licensed by the IRGC Navy and pay tolls.</p>
+      </div>
+
+      <!-- Phase 3: Escalation Spiral -->
+      <h3 style="margin:28px 0 16px -32px; font-size:18px; color:var(--accent-orange); letter-spacing:0.02em;">&#9632; PHASE 3 — Tit-for-Tat Escalation (May)</h3>
+
+      <div class="tl-item major">
+        <div class="tl-date">May 6, 2026</div>
+        <h4>US Disables Iranian Tanker M/T Hasna</h4>
+        <p>An F/A-18 Super Hornet from USS Lincoln fires cannon rounds into the Iranian-flagged tanker <em>M/T Hasna</em>, disabling it. This is the first direct US attack on an Iranian commercial vessel since the ceasefire.</p>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-date">May 9, 2026</div>
+        <h4>Two More Iranian Tankers Fired Upon</h4>
+        <p>US forces fire on <em>Sea Star III</em> and <em>Sevda</em>, two more Iran-flagged tankers. The IRGC vows "severe retaliation."</p>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-date">May 25, 2026</div>
+        <h4>US Bombs Iranian Radar & Drone Sites</h4>
+        <p>CENTCOM confirms strikes on Iranian radar installations and drone control stations. Photos released show F/A-18E Super Hornets landing on the USS Lincoln after the mission.</p>
+      </div>
+
+      <div class="tl-item major">
+        <div class="tl-date">May 27, 2026</div>
+        <h4>Operation "Project Freedom" — and Iran's Response</h4>
+        <p>The US launches "Project Freedom" to guide neutral vessels out of the Gulf. Iran retaliates with drone and missile strikes that hit commercial ships and the UAE. Trump halts the operation within hours. The cycle of action-reaction intensifies.</p>
+      </div>
+
+      <!-- Phase 4: June Crisis -->
+      <h3 style="margin:28px 0 16px -32px; font-size:18px; color:var(--accent-red); letter-spacing:0.02em;">&#9632; PHASE 4 — The June 2–3 Crisis (Current)</h3>
+
+      <div class="tl-item major">
+        <div class="tl-date">Jun 1, 2026</div>
+        <h4>Kuwait Thwarts Missile Barrage</h4>
+        <p>Kuwait announces it successfully intercepted a barrage of missiles and drones. Kuwait holds Iran "fully responsible for these heinous attacks." CENTCOM confirms intercepting two Iranian ballistic missiles targeting US forces in Kuwait.</p>
+      </div>
+
+      <div class="tl-item major">
+        <div class="tl-date">Jun 2, 2026</div>
+        <h4>US Strikes Qeshm Island — Iran Vows Revenge</h4>
+        <p>US forces strike an IRGC communications tower on <strong>Qeshm Island</strong> in what CENTCOM calls "self-defense strikes." Hours later, the US disables a sixth tanker — the Botswana-flagged <em>M/T Lexie</em> — with a Hellfire missile to its engine room as it approached Kharg Island. IRGC mobilization begins.</p>
+      </div>
+
+      <div class="tl-item major">
+        <div class="tl-date">Jun 2–3 (Overnight)</div>
+        <h4>IRGC Launches Massive Retaliation</h4>
+        <p>IRGC forces fire a coordinated salvo of ballistic missiles and drones at <strong>US bases in Kuwait and Bahrain</strong>, including the US 5th Fleet HQ. Air raid sirens sound in eastern Saudi Arabia and Dubai. US and Bahraini air defenses intercept three missiles; two targeting Kuwait fall short.</p>
+      </div>
+
+      <div class="tl-item major">
+        <div class="tl-date" style="color:var(--accent-red); font-size:15px;">&#128308; Jun 3, 2026 — Dawn</div>
+        <h4 style="font-size:19px;">Kuwait International Airport Terminal 1 Hit</h4>
+        <p>Despite air defense interceptions, Iranian drones breach Kuwait's defenses and strike <strong>Terminal 1</strong> of Kuwait International Airport. The terminal sustains severe structural damage. <strong>1 person killed, 63 wounded</strong> (7 requiring major emergency surgery). All flights suspended; diplomatic missions at the airport also damaged.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     KUWAIT ATTACK DEEP DIVE
+     ============================================================ -->
+<section class="section" id="kuwait" style="background: var(--bg-surface);">
+  <div class="container">
+    <h2 class="section-title">&#128308; The Kuwait Airport Attack — June 3, 2026</h2>
+    <p class="section-subtitle">A detailed look at the day's events — the deadliest single incident since the April ceasefire.</p>
+
+    <!-- Photo: Kuwait Airport -->
+    <div class="photo-block">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Kuwait_Airport_Entrance.jpg/1280px-Kuwait_Airport_Entrance.jpg"
+           alt="Kuwait International Airport terminal exterior"
+           loading="lazy">
+      <div class="photo-caption">
+        <strong>&#128247; Kuwait International Airport Terminal 1</strong> — The passenger terminal struck by Iranian drones in the early hours of June 3, 2026. The attack killed 1 person, wounded 63, and caused severe structural damage. All flights were suspended; operations later partially resumed from Terminal 4. (File photo: Wikimedia Commons)
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:24px;">
+      <div class="card-body">
+        <h3>&#9200; Minute-by-Minute Breakdown</h3>
+        <table style="width:100%; border-collapse:collapse; font-size:14px; margin-top:16px;">
+          <thead>
+            <tr style="border-bottom:2px solid var(--border-active);">
+              <th style="text-align:left; padding:10px 12px; color:var(--text-muted); font-weight:500; font-size:12px;">TIME (LOCAL)</th>
+              <th style="text-align:left; padding:10px 12px; color:var(--text-muted); font-weight:500; font-size:12px;">EVENT</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--border-subtle);">
+              <td style="padding:10px 12px; font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--accent-blue); white-space:nowrap;">02:00–03:00</td>
+              <td style="padding:10px 12px;">US Army announces strikes on Iranian military sites on Qeshm Island</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border-subtle);">
+              <td style="padding:10px 12px; font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--accent-red); white-space:nowrap;">03:00–04:00</td>
+              <td style="padding:10px 12px;">IRGC launches coordinated missile & drone salvo toward Kuwait and Bahrain</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border-subtle);">
+              <td style="padding:10px 12px; font-family:'JetBrains Mono',monospace; font-size:12px; white-space:nowrap;">~04:30</td>
+              <td style="padding:10px 12px;">Kuwaiti air defense systems intercept multiple incoming projectiles; explosions heard across the city</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border-subtle);">
+              <td style="padding:10px 12px; font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--accent-red); white-space:nowrap;">~05:15</td>
+              <td style="padding:10px 12px; background:rgba(231,76,60,0.06);"><strong>&#128308; Iranian drones breach defenses &mdash; Terminal 1 is hit.</strong> Severe structural damage. Fires break out.</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border-subtle);">
+              <td style="padding:10px 12px; font-family:'JetBrains Mono',monospace; font-size:12px; white-space:nowrap;">~05:45</td>
+              <td style="padding:10px 12px;">Bahrain activates emergency sirens; residents told to seek shelter</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border-subtle);">
+              <td style="padding:10px 12px; font-family:'JetBrains Mono',monospace; font-size:12px; white-space:nowrap;">06:00</td>
+              <td style="padding:10px 12px;">Kuwait Civil Aviation suspends ALL flights; inbound flights diverted</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border-subtle);">
+              <td style="padding:10px 12px; font-family:'JetBrains Mono',monospace; font-size:12px; white-space:nowrap;">09:33</td>
+              <td style="padding:10px 12px;">Iran's Foreign Ministry condemns US attacks; says Kuwait & Bahrain bear "direct responsibility"</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border-subtle);">
+              <td style="padding:10px 12px; font-family:'JetBrains Mono',monospace; font-size:12px; white-space:nowrap;">09:56</td>
+              <td style="padding:10px 12px;">Mohsen Rezaei (adviser to Supreme Leader) warns of a "deluge of missiles and drones" if US attacks continue</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border-subtle);">
+              <td style="padding:10px 12px; font-family:'JetBrains Mono',monospace; font-size:12px; white-space:nowrap;">10:00</td>
+              <td style="padding:10px 12px;">Kuwait Foreign Ministry confirms: <strong>1 killed, 63 wounded</strong></td>
+            </tr>
+            <tr>
+              <td style="padding:10px 12px; font-family:'JetBrains Mono',monospace; font-size:12px; white-space:nowrap;">10:31</td>
+              <td style="padding:10px 12px;">Partial flight resumption announced — Kuwait Airways only, from Terminal 4</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="callout callout-danger" style="margin-top:24px;">
+      <strong>&#9888; Why Was Kuwait Targeted?</strong>
+      Iran has repeatedly accused Kuwait and Bahrain of allowing US forces to launch strikes from their soil. From Tehran's perspective, these Gulf states are not neutral — they are staging grounds for US operations. The June 3 attack was specifically retaliation for the US strike on Qeshm Island hours earlier. Iran's Foreign Ministry stated the attacks targeted "military infrastructure," but the strike on the civilian airport terminal drew international condemnation.
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     STRAIT OF HORMUZ
+     ============================================================ -->
+<section class="section" id="hormuz">
+  <div class="container">
+    <h2 class="section-title">&#128681; The Strait of Hormuz — World's Most Dangerous Chokepoint</h2>
+    <p class="section-subtitle">Why a 21-mile-wide strip of water matters to everyone on Earth.</p>
+
+    <div class="photo-block">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Strait_of_Hormuz_from_ISS.jpg/1280px-Strait_of_Hormuz_from_ISS.jpg"
+           alt="Strait of Hormuz as seen from the International Space Station"
+           loading="lazy">
+      <div class="photo-caption">
+        <strong>&#128247; The Strait of Hormuz from space</strong> — This 21-nautical-mile-wide waterway carries ~20% of the world's daily oil and LNG supply. Normally 125–140 ships transit daily. As of June 2026, traffic has collapsed to fewer than 7 ships per day due to the dual US-Iran blockade. (Photo: NASA/ISS)
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:24px;">
+      <div class="card-body">
+        <h3>&#9889; By the Numbers: A Chokepoint Held Hostage</h3>
+        <div class="fact-grid" style="margin-top:16px;">
+          <div class="fact-box">
+            <div class="fact-num" style="color:var(--accent-orange);">20%</div>
+            <div class="fact-label">of global oil passes through daily<br>(normal conditions)</div>
+          </div>
+          <div class="fact-box">
+            <div class="fact-num" style="color:var(--accent-orange);">~7</div>
+            <div class="fact-label">ships/day now transit<br>(vs. 125–140 normally)</div>
+          </div>
+          <div class="fact-box">
+            <div class="fact-num" style="color:var(--accent-orange);">69M</div>
+            <div class="fact-label">barrels of oil stranded<br>on 41 tankers</div>
+          </div>
+          <div class="fact-box">
+            <div class="fact-num" style="color:var(--accent-orange);">~20K</div>
+            <div class="fact-label">seafarers trapped<br>inside the Gulf</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout callout-warn" style="margin-top:24px;">
+      <strong>&#9888; The Double Blockade</strong>
+      This crisis is unusual: <strong>both sides</strong> are blocking the strait. Iran was first — closing it in retaliation for the February 28 strikes. Then the US imposed its own blockade in April to strangle Iran's oil revenue. The result: a near-total paralysis of one of the world's most vital trade arteries. Ships that attempt to run either blockade face disabling fire. As of June 3, the US has disabled 6 tankers; Iran has struck multiple vessels it accused of cooperating with US forces.
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     GLOBAL IMPACT
+     ============================================================ -->
+<section class="section" id="impact" style="background: var(--bg-surface);">
+  <div class="container">
+    <h2 class="section-title">&#127758; Global Ripple Effects</h2>
+    <p class="section-subtitle">This is not just a regional conflict — the whole world feels it.</p>
+
+    <div class="card">
+      <div class="card-body">
+        <h3>&#128184; Oil & Energy</h3>
+        <p>Brent crude hit <strong>~$96/barrel</strong> on June 3, up more than 1% on the day. The US Strategic Petroleum Reserve is at its lowest level since 1983. Gasoline prices are surging globally. If the Strait of Hormuz remains paralyzed, analysts warn oil could breach $120/barrel within weeks.</p>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px;">
+      <div class="card-body">
+        <h3>&#128200; Markets & Economy</h3>
+        <p>The OECD downgraded 2026 global growth forecasts to <strong>2.8%</strong> (down from 3.4% in 2025). Moody's chief economist warned that Trump has "about a week" to reach a deal or risk pushing the US into recession. Gold has surpassed US Treasuries as the world's #1 reserve asset (27% vs 22%). Bitcoin tumbled below $67,000 after Strategy Inc. sold off holdings.</p>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px;">
+      <div class="card-body">
+        <h3>&#128737; Humanitarian Crisis</h3>
+        <p>Over <strong>1.2 million people</strong> are displaced in Lebanon due to the parallel Israel-Hezbollah conflict. UNICEF warns of aid disruptions across Gaza, Somalia, South Sudan, Mali, Nigeria, and the DRC as transportation costs skyrocket. The ~20,000 seafarers trapped inside the Gulf face dwindling supplies.</p>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px;">
+      <div class="card-body">
+        <h3>&#127760; Diplomacy at a Standstill</h3>
+        <p>Peace talks in Islamabad, mediated by Pakistan, remain stalled. Iran says message exchanges stopped "several days ago"; Trump insists conversations continue. The US has added demands regarding Iran's nuclear program and strait sovereignty. Iran's Foreign Minister Abbas Araghchi held a call with Saudi Foreign Minister Faisal bin Farhan Al Saud to discuss de-escalation, but no concrete progress has been reported.</p>
+      </div>
+    </div>
+
+    <!-- Photo: Oil tanker -->
+    <div class="photo-block" style="margin-top:24px;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Oil_tanker_in_the_Strait_of_Hormuz_%289441683697%29.jpg/1280px-Oil_tanker_in_the_Strait_of_Hormuz_%289441683697%29.jpg"
+           alt="Oil tanker in the Strait of Hormuz"
+           loading="lazy">
+      <div class="photo-caption">
+        <strong>&#128247; An oil tanker navigating the Strait of Hormuz</strong> — In normal times, over 125 vessels like this one transit the strait daily, carrying roughly one-fifth of the world's petroleum. The US-Iran dual blockade has reduced this to a trickle, threatening global energy security. (File photo: Flickr/TerminalLabs)
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SOURCES
+     ============================================================ -->
+<section class="section" id="sources">
+  <div class="container">
+    <h2 class="section-title">&#128214; Sources & Further Reading</h2>
+    <p class="section-subtitle">All information on this page is compiled from the following news sources.</p>
+
+    <div style="display:grid; gap:10px; font-size:14px; color:var(--text-secondary);">
+      <p><a href="https://gulfnews.com/world/mena/iranian-missiles-target-bahrain-kuwait-us-says-threats-successfully-defeated-1.500561485" target="_blank" rel="noopener" style="color:var(--accent-blue);">Gulf News — Iranian missiles target Bahrain, Kuwait; US says threats 'successfully defeated'</a></p>
+      <p><a href="https://www.newarab.com/news/us-strikes-qeshm-island-iran-retaliates-kuwait-and-bahrain" target="_blank" rel="noopener" style="color:var(--accent-blue);">The New Arab — US strikes Qeshm Island, Iran retaliates on Kuwait and Bahrain</a></p>
+      <p><a href="https://www.al-monitor.com/live-blog/kuwait-airport-damaged-flights-suspended-after-iran-missile-attack" target="_blank" rel="noopener" style="color:var(--accent-blue);">Al-Monitor — Kuwait airport damaged, flights suspended after Iran missile attack</a></p>
+      <p><a href="https://www.khaleejtimes.com/world/gulf/iran-attack-kuwait-airport-injuries-flights-suspended" target="_blank" rel="noopener" style="color:var(--accent-blue);">Khaleej Times — Several injured after Iranian drones attack Kuwait International Airport</a></p>
+      <p><a href="https://pakobserver.net/hostilities-erupt-in-gulf-as-us-iran-exchange-airstrikes-amid-little-progress-in-talks/" target="_blank" rel="noopener" style="color:var(--accent-blue);">Pakistan Observer — Hostilities erupt in Gulf as US, Iran exchange airstrikes</a></p>
+      <p><a href="https://f.aa.com.tr/en/world/morning-briefing-june-3-2026/3954762" target="_blank" rel="noopener" style="color:var(--accent-blue);">Anadolu Agency — Morning Briefing: June 3, 2026</a></p>
+      <p><a href="https://www.emirates247.com/world/us-intercepts-iranian-missiles-targeting-kuwait-and-bahrain-strikes-qeshm-island/2204" target="_blank" rel="noopener" style="color:var(--accent-blue);">Emirates 24/7 — US intercepts Iranian missiles targeting Kuwait and Bahrain</a></p>
+      <p><a href="https://english.news.cn/20260603/187438db4a184a08be535960d06d0e5e/c.html" target="_blank" rel="noopener" style="color:var(--accent-blue);">Xinhua — World news summary at 0030 GMT, June 3</a></p>
+      <p><a href="https://indianexpress.com/article/world/us-military-strikes-iran-bound-oil-tanker-defying-trumps-naval-blockade-10721360/" target="_blank" rel="noopener" style="color:var(--accent-blue);">Indian Express — US military strikes Iran-bound oil tanker defying Trump's naval blockade</a></p>
+      <p><a href="https://www.wionews.com/photos/pics-uss-abraham-lincoln-conducts-us-blockade-operations-in-arabian-sea-centcom-1776426503300" target="_blank" rel="noopener" style="color:var(--accent-blue);">WION — USS Abraham Lincoln conducts blockade operations in Arabian Sea</a></p>
+      <p><a href="https://www.cnstock.com/commonDetail/724174" target="_blank" rel="noopener" style="color:var(--accent-blue);">中国证券报 — 6月3日国际晨讯</a></p>
+      <p><a href="https://www.cls.cn/detail/2388972" target="_blank" rel="noopener" style="color:var(--accent-blue);">财联社 — 周三你需要知道的隔夜全球要闻</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="footer">
+  <p><strong>GulfWar Watch</strong> — A public-interest explainer project. Not affiliated with any government or news organization.</p>
+  <p>Images: Wikimedia Commons, U.S. Navy (public domain), NASA (public domain). Compiled June 3, 2026.</p>
+  <p style="margin-top:12px;"><a href="#">Back to top &#8593;</a></p>
+</footer>
+
+<!-- Simple nav highlight on scroll -->
+<script>
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-inner a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => {
+    if (window.scrollY >= s.offsetTop - 100) current = s.getAttribute('id');
+  });
+  navLinks.forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+  });
+});
+</script>
+
+</body>
+</html>
