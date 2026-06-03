@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://gulfwar.zwh520yj.com/sitemap.xml
